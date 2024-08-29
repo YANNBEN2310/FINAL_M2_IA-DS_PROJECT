@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;  /* Added margin-bottom to create space between containers */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 20px;
+    border-radius: 15px;  /* Round the entire table */
+    overflow: hidden;  /* Ensure the rounded corners are visible */
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px 15px 0 0;  /* Round the top corners */
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+tbody tr:hover td:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+tbody tr:hover td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+tbody td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.phase1 {
+    background-color: #d9e8ff;
+}
+
+.phase2 {
+    background-color: #ffd9d9;
+}
+
+.phase3 {
+    background-color: #d9ffd9;
+}
+
+.phase4 {
+    background-color: #fff0d9;
+}
+
+i {
+    margin-right: 8px;
+}
+
+/* Rounded corners for the top-left and top-right cells in the table header */
+thead th:first-child {
+    border-top-left-radius: 15px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 15px;
+}
+
+/* Rounded corners for the bottom-left and bottom-right cells in the last table row */
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+/* Specific colors for rows in the Ressources table based on Catégorie */
+.ressources-humaines {
+    background-color: #fff4e5;
+}
+
+.materiel {
+    background-color: #e5fff4;
+}
+
+.logiciels-licences {
+    background-color: #e5f4ff;
+}

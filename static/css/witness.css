@@ -1,0 +1,126 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.witness-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 95%;
+    max-width: 1600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.witness-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Containers */
+.section-container {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.section-container:hover {
+    background-color: #bbdefb;
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Objectives Styling */
+.objectives, .sampling, .analysis {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.objective-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    flex: 1;
+}
+
+.objective-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.objective-item p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.bg-blue { background-color: #42a5f5; }
+.bg-orange { background-color: #ffa726; }
+.bg-green { background-color: #66bb6a; }
+.bg-red { background-color: #ef5350; }
+
+.icon-container i {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+/* Chart Containers */
+.chart-container {
+    width: 45%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .objectives, .sampling, .analysis {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Chart Containers */
+.chart-container {
+    width: 100%;
+    max-width: 900px; /* Adjust the max-width as necessary */
+    margin: 0 auto; /* Center the chart */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

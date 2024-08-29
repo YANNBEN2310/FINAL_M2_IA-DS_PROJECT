@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats Obtenus avec le Scraper</title>
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/scrap_result.css">
+</head>
+
+<body>
+    <div class="container" id="content-to-capture">
+        <h2>Résultats Obtenus avec le Scraper</h2>
+        <div class="sub-container">
+            <div>
+                <h3>Réduction du Temps de Collecte des Données</h3>
+                <div class="sub-sub-container">
+                    <i class="fas fa-hourglass-start"></i>
+                    <div>Temps estimé initialement : 10,61 heures pour 297 sites</div>
+                </div>
+                <div class="sub-sub-container">
+                    <i class="fas fa-hourglass-end"></i>
+                    <div>Temps réel obtenu : 57 minutes (0,95 heure) pour 297 sites</div>
+                </div>
+                <div class="comparison-container">
+                    Rapport ≈ 11.17
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-container">
+            <div>
+                <h3>Diminution des Erreurs Humaines</h3>
+                <div class="sub-sub-container">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <div>22 clics manuels sur 23 actions éliminés par site</div>
+                </div>
+                <div class="sub-sub-container">
+                    <i class="fas fa-users-cog"></i>
+                    <div>75,000 clics évités pour un portefeuille de 1,000 sites</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-container">
+            <div>
+                <h3>Gestion Efficace des Grandes Volumes de Données</h3>
+                <div class="sub-sub-container" style="width: 100%;">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>Extraction et organisation des données pour des centaines de sites en une session</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="download-svg"><i class="fas fa-file-download"></i>Télécharger en SVG</button>
+            <button class="button" id="download-png"><i class="fas fa-file-download"></i>Télécharger en PNG</button>
+            <button class="button" id="download-gif"><i class="fas fa-file-download"></i>Télécharger en GIF</button>
+        </div>
+    </div>
+
+    <!-- Include JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js"></script>
+    <script src="static/js/scrap_result.js"></script>
+</body>
+
+</html>

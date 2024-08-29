@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.problem-container {
+    background-color: #ffffff;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 120%;
+    max-width: 1600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.problem-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.problem-content {
+    background-color: #e3f2fd; /* Light blue nuance */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.problem-content:hover {
+    background-color: #bbdefb; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(185, 4, 4, 0.842);
+}
+
+.problem-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
+h1 i {
+    color: #ff5722; /* Orange color to match the idea of a warning or problem */
+    margin-right: 10px; /* Spacing between the icon and the text */
+}

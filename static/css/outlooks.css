@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sub-container,
+.sub-sub-container {
+    padding: 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.sub-container:hover,
+.sub-sub-container:hover {
+    transform: scale(1.05);
+    background-color: #cceeff;
+}
+
+.sub-container {
+    background-color: #007bff;
+    color: white;
+}
+
+.sub-container:nth-child(even) {
+    background-color: #28a745;
+    color: white;
+}
+
+.sub-sub-container {
+    background-color: #ffc107;
+    color: white;
+    margin-left: 40px;
+}
+
+.sub-sub-container:nth-child(even) {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.sub-container h3,
+.sub-sub-container h4 {
+    margin: 0;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.sub-container i,
+.sub-sub-container i {
+    font-size: 24px;
+}
+
+.container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button i {
+    margin-right: 10px;
+}

@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.intro-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 1600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.intro-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for the context section */
+.context-container {
+    background-color: #e3f2fd; /* Light blue nuance */
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.context-container:hover {
+    background-color: #bbdefb; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.context-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Container for the schematic section */
+.schematic-container {
+    background-color: #e1f5fe; /* Another shade of blue */
+    padding: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.schematic-container:hover {
+    background-color: #b3e5fc; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.schema, .click-schema, .prediction-schema {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Ensures even spacing between the icons */
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.circle-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column; /* Allow label below the icon */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1; /* Ensure circles are on top */
+}
+
+.circle-container img {
+    width: 50%; /* Adjust size for better fit */
+    height: auto;
+    border-radius: 50%;
+}
+
+.circle-container i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #003366; /* Dark blue color for icons */
+}
+
+.circle-container p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #003366; /* Dark blue for the text as well */
+}
+
+.circle-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.arrow-container {
+    font-size: 18px; /* Reduced font size */
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.arrow-container i {
+    margin-left: 5px;
+}
+
+.arrow-container:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}
+
+/* Additional container for the click schematic */
+.click-schematic-container {
+    background-color: #e8eaf6; /* Light purple-blue */
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.click-schematic-container:hover {
+    background-color: #c5cae9; /* Darker purple-blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.prediction-schematic-container {
+    background-color: #f3e5f5; /* Light lavender */
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.prediction-schematic-container:hover {
+    background-color: #e1bee7; /* Darker lavender on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.circle-container.click-schema-circle {
+    background-color: #ffcc80; /* Light orange for click schema circles */
+}
+
+.circle-container.prediction-schema-circle {
+    background-color: #b39ddb; /* Light purple for prediction schema circles */
+}
+/* Additional container for the energy flow schematic */
+.energy-flow-schematic-container {
+    background-color: #e0f7fa; /* Light cyan */
+    padding: 20px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.energy-flow-schematic-container:hover {
+    background-color: #b2ebf2; /* Darker cyan on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.energy-flow-schema {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.circle-container.energy-flow-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
+    z-index: 1; /* Ensure circles are on top */
+}
+
+.circle-container.energy-flow-circle i {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.circle-container.energy-flow-circle p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #003366; /* Dark blue for the text */
+}
+
+/* Specific colors and effects for each energy type */
+.circle-container.energy-flow-circle.electricity {
+    background-color: #ffeb3b; /* Bright yellow for electricity */
+}
+
+.circle-container.energy-flow-circle.electricity:hover {
+    background-color: #fdd835; /* Darker yellow on hover */
+    transform: scale(1.1) rotate(20deg); /* Slight rotation to symbolize energy */
+    box-shadow: 0 8px 30px rgba(255, 235, 59, 0.6); /* Yellow glow */
+}
+
+.circle-container.energy-flow-circle.gas {
+    background-color: #ff7043; /* Orange for gas */
+}
+
+.circle-container.energy-flow-circle.gas:hover {
+    background-color: #ff5722; /* Darker orange on hover */
+    transform: scale(1.1); /* Explosion effect with scaling */
+    box-shadow: 0 8px 30px rgba(255, 87, 34, 0.6); /* Orange glow */
+}
+
+.circle-container.energy-flow-circle.oil {
+    background-color: #757575; /* Grey for oil */
+}
+
+.circle-container.energy-flow-circle.oil:hover {
+    background-color: #616161; /* Darker grey on hover */
+    transform: scale(1.1); /* Slight scaling for weight */
+    box-shadow: 0 8px 30px rgba(97, 97, 97, 0.6); /* Grey glow */
+}
+
+.circle-container.energy-flow-circle.heating {
+    background-color: #ff8a80; /* Light red for heating */
+}
+
+.circle-container.energy-flow-circle.heating:hover {
+    background-color: #ff5252; /* Darker red on hover */
+    transform: scale(1.1) rotate(-20deg); /* Rotate to symbolize heat waves */
+    box-shadow: 0 8px 30px rgba(255, 138, 128, 0.6); /* Red glow */
+}
+
+.circle-container.energy-flow-circle.cooling {
+    background-color: #80d8ff; /* Light blue for cooling */
+}
+
+.circle-container.energy-flow-circle.cooling:hover {
+    background-color: #40c4ff; /* Darker blue on hover */
+    transform: scale(1.1); /* Scaling for cool air effect */
+    box-shadow: 0 8px 30px rgba(128, 216, 255, 0.6); /* Blue glow */
+}

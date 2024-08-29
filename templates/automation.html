@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actions Automatisées</title>
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/automation.css">
+</head>
+<body>
+    <div class="container" id="content-to-capture">
+        <h2>Actions Automatisées et Clics Épargnés</h2>
+
+        <div class="section">
+            <h3><i class="fas fa-robot"></i> Actions Automatisées</h3>
+            <div class="actions">
+                <div id="sub-container-1">
+                    <h4><i class="fas fa-sign-in-alt"></i> Login</h4>
+                    <p>3 actions</p>
+                </div>
+                <div id="sub-container-2">
+                    <h4><i class="fas fa-user"></i> Sélection du Client</h4>
+                    <p>4 actions</p>
+                </div>
+                <div id="sub-container-3">
+                    <h4><i class="fas fa-building"></i> Sélection du Site</h4>
+                    <p>3 actions</p>
+                </div>
+            </div>
+            <div class="actions" style="margin-top: 20px;">
+                <div id="sub-container-4">
+                    <h4><i class="fas fa-database"></i> Menu "Données"</h4>
+                    <p>2 actions</p>
+                </div>
+                <div id="sub-container-5">
+                    <h4><i class="fas fa-calendar-alt"></i> Configuration des Dates</h4>
+                    <p>2 actions</p>
+                </div>
+                <div id="sub-container-6">
+                    <h4><i class="fas fa-filter"></i> Sélection du Fluide</h4>
+                    <p>3 actions</p>
+                </div>
+            </div>
+            <div class="actions" style="margin-top: 20px;">
+                <div id="sub-container-7">
+                    <h4><i class="fas fa-file-export"></i> Exportation des Données</h4>
+                    <p>3 actions</p>
+                </div>
+                <div id="sub-container-8">
+                    <h4><i class="fas fa-table"></i> Extraction des Sites</h4>
+                    <p>3 actions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3><i class="fas fa-mouse-pointer"></i> Clics Épargnés</h3>
+            <div class="clicks">
+                <div>
+                    <h4><i class="fas fa-mouse"></i> Clics Total</h4>
+                    <p>15 - 20 clics</p>
+                </div>
+                <div>
+                    <h4><i class="fas fa-mouse"></i> Par Client</h4>
+                    <p>15 clics</p>
+                </div>
+                <div>
+                    <h4><i class="fas fa-mouse"></i> Par Site</h4>
+                    <p>20 clics</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="download-svg"><i class="fas fa-file-download"></i>Télécharger en SVG</button>
+            <button class="button" id="download-png"><i class="fas fa-file-download"></i>Télécharger en PNG</button>
+            <button class="button" id="download-gif"><i class="fas fa-file-download"></i>Télécharger en GIF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js"></script>
+    <script src="/static/js/automation.js"></script>
+</body>
+</html>

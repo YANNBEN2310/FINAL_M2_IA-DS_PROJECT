@@ -1,0 +1,521 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container */
+.iboard-container {
+    background-color: #ffffff;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 95%;
+    max-width: 1600px; /* Larger max width for more content */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.iboard-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Containers */
+.section-container {
+    background-color: #e3f2fd; /* Light blue */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 30px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.section-container:hover {
+    background-color: #bbdefb; /* Slightly darker blue on hover */
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fonctionnalités principales: Enhanced List */
+.features-container {
+    padding: 20px;
+    background-color: #ffffff; /* White background for the section */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between list items */
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #e3f2fd; /* Light blue for the list item */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+    background-color: #bbdefb; /* Slightly darker blue on hover */
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Container inside the feature item */
+.feature-item .icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1976d2; /* Blue color for icons background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item .icon-container i {
+    font-size: 24px;
+    color: #ffffff; /* White color for the icons */
+}
+
+.feature-item:hover .icon-container {
+    background-color: #1565c0; /* Darker blue on hover */
+    transform: scale(1.1);
+}
+
+.feature-item p {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    flex: 1; /* Allow the text to take up remaining space */
+}
+
+/* Usage Items (Utilisation de l’iBoard) */
+.usage-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
+}
+
+.usage-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+}
+
+/* Icon Container */
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #bbdefb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-container i {
+    font-size: 24px;
+    color: #007bff; /* Dark blue color for icons */
+}
+
+.usage-item:hover .icon-container,
+.limit-item:hover .icon-container,
+.feature-item:hover .icon-container {
+    background-color: #90caf9; /* Darker blue on hover */
+    transform: scale(1.1);
+}
+
+.usage-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Limitations Items */
+.limit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s;
+}
+
+.limit-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+}
+
+/* Text inside feature, usage, and limit items */
+.features-container p,
+.usage-item p,
+.limit-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Section titles */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #1976d2; /* Blue color for section titles */
+}
+
+h3 {
+    font-size: 20px;
+    color: #1976d2; /* Blue color for sub-section titles */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .iboard-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .features-container,
+    .usage-item,
+    .limit-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icon-container {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+/* Process Diagram Section */
+.process-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.process-box {
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.process-box h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.process-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.process-box ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.process-arrow {
+    font-size: 50px;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.process-box:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.process-arrow.arrow1 {
+    color: #ffa726; /* Orange color */
+}
+
+.process-arrow.arrow2 {
+    color: #42a5f5; /* Blue color */
+}
+
+.step1 .process-box {
+    background-color: #ff7043; /* Orange */
+    color: #ffffff;
+}
+
+.step2 .process-box {
+    background-color: #42a5f5; /* Blue */
+    color: #ffffff;
+}
+
+.step3 .process-box {
+    background-color: #ffca28; /* Yellow */
+    color: #ffffff;
+}
+
+.equation-section {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+}
+
+.equation-section p {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+}
+
+.figure-caption {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+/* Automatised Solutions Section */
+.automated-solutions-container {
+    background-color: #e8f5e9; /* Light green */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.automated-solutions-container:hover {
+    background-color: #c8e6c9; /* Slightly darker green on hover */
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title and Content within Automated Solutions */
+.automated-solutions-container h2 {
+    color: #388e3c; /* Green color for titles */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.automated-solutions-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Benefit Items */
+.benefit-item {
+    background-color: #f1f8e9; /* Light lime green */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-item:hover {
+    background-color: #dcedc8; /* Darker lime green on hover */
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-item h3 {
+    color: #558b2f; /* Dark green for benefit titles */
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.benefit-item ul {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+    color: #555;
+}
+
+.benefit-item ul li {
+    margin-bottom: 10px;
+}
+
+/* Hypotheses and Data */
+.hypotheses-container {
+    background-color: #fffde7; /* Light yellow */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hypotheses-container h3 {
+    color: #fbc02d; /* Yellow color for titles */
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.hypotheses-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.hypotheses-container ul {
+    list-style-type: circle;
+    margin-left: 20px;
+    color: #555;
+}
+
+.hypotheses-container ul li {
+    margin-bottom: 10px;
+}
+
+/* Sub-Container for Solutions */
+.solution-sub-container {
+    background-color: #f3e5f5; /* Light purple */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.solution-sub-container:hover {
+    background-color: #e1bee7; /* Darker purple on hover */
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.solution-sub-container h3 {
+    color: #7b1fa2; /* Dark purple for titles */
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.solution-sub-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .automated-solutions-container,
+    .benefit-item,
+    .hypotheses-container,
+    .solution-sub-container {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .process-diagram {
+        flex-direction: column;
+    }
+
+    .process-step {
+        margin-bottom: 20px;
+    }
+
+    .process-arrow {
+        display: none;
+    }
+}
+/* Schema Container */
+.schema-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.schema-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.schema-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #42a5f5; /* Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.schema-icon i {
+    font-size: 30px;
+    color: #ffffff; /* White */
+}
+
+.schema-step:hover .schema-icon {
+    background-color: #1e88e5; /* Darker blue on hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.schema-arrow {
+    font-size: 50px;
+    color: #ffa726; /* Orange */
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.schema-arrow:hover {
+    color: #fb8c00; /* Darker orange on hover */
+    transform: scale(1.1);
+}
+
+/* Figure Caption */
+.figure-caption {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .schema-container {
+        flex-direction: column;
+    }
+
+    .schema-step {
+        margin-bottom: 20px;
+    }
+
+    .schema-arrow {
+        display: none;
+    }
+}

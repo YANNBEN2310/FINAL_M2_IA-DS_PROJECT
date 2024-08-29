@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Visualization with Simulation</title>
+    <link rel="stylesheet" href="static/css/neuron.css">
+</head>
+<body>
+
+    <header>
+        <h1>Neural Network Visualization Tool</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    
+
+    <div class="container">
+        <form id="networkForm">
+            <label for="inputCount">Number of Input Neurons: </label>
+            <input type="number" id="inputCount" name="inputCount" required>
+
+            <div id="inputNames"></div>
+
+            <label for="hiddenLayerCount">Number of Hidden Layers: </label>
+            <input type="number" id="hiddenLayerCount" name="hiddenLayerCount" required>
+
+            <div id="hiddenLayerSizes"></div>
+
+            <label for="outputCount">Number of Output Neurons: </label>
+            <input type="number" id="outputCount" name="outputCount" required>
+
+            <input type="submit" value="Generate Network">
+        </form>
+
+        <div class="svg-container">
+            <svg id="networkSVG" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+        <div class="simulation-container">
+            <h2>Simulation of Neuron Operations</h2>
+            <button id="playAnimationBtn">Play Animation</button>
+            <div class="simulation-content">
+                <!-- Input Vector -->
+                <div class="neuron-operation">
+                    <div class="symbol">x1</div>
+                    <div class="symbol">x2</div>
+                    <div class="symbol">x3</div>
+                    <div class="symbol">x4</div>
+                    <div class="symbol">x5</div>
+                    <div class="description">Input Vector</div>
+                    <div id="inputVectorDisplay" class="output-subcontainer"></div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <!-- Weighted Sum -->
+                <div class="neuron-operation">
+                    <div class="symbol">w1*x1 +</div>
+                    <div class="symbol">w2*x2 +</div>
+                    <div class="symbol">w3*x3 +</div>
+                    <div class="symbol">w4*x4 +</div>
+                    <div class="symbol">w5*x5 + b</div>
+                    <div class="description">Weighted Sum</div>
+                    <div id="weightedSumDisplay" class="output-subcontainer"></div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <!-- Activation Function -->
+                <div class="neuron-operation">
+                    <div class="symbol">φ(Σ)</div>
+                    <div class="description">Activation Function</div>
+                    <div id="activationFunctionDisplay" class="output-subcontainer"></div>
+                </div>
+                <div class="arrow">&rarr;</div>
+                <!-- Output -->
+                <div class="neuron-operation">
+                    <div class="symbol">y</div>
+                    <div class="description">Output</div>
+                    <div id="outputDisplay" class="output-subcontainer"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Propagation Subcontainer -->
+        <div class="propagation-container">
+            <h2>Propagation Animation</h2>
+            <button id="playPropagationModBtn">Play Propagation</button>
+            <button id="playReversePropagationModBtn">Play Reverse Propagation</button>
+            <div class="propagation-content-mod">
+                <svg id="networkSVGMod" xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer>
+        <p>&copy;Développé par Yann BEN ABDERRAHMANE 2024</p>
+    </footer>
+
+    <script src="static/js/neuron.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact sur la Gestion des Données Énergétiques</title>
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/impact.css">
+    <!-- Chart.js Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container" id="content-to-capture">
+        <h2>Impact sur la Gestion des Données Énergétiques</h2>
+
+        <div class="section hoverable">
+            <h3>Réduction du Temps de Collecte des Données</h3>
+            <div class="chart-container">
+                <canvas id="timeChart"></canvas>
+            </div>
+        </div>
+
+        <div class="section hoverable">
+            <h3>Évolution du Budget Épargné</h3>
+            <div class="chart-container">
+                <canvas id="budgetChart"></canvas>
+            </div>
+        </div>
+
+        <div class="section hoverable">
+            <h3>Gestion Efficace des Grandes Volumes de Données</h3>
+            <div class="chart-container">
+                <canvas id="dataChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Calculation Tool -->
+        <div class="section">
+            <h3>Calculateur de Temps et Budget Épargné</h3>
+            <div class="input-container">
+                <input type="number" id="siteCount" placeholder="Entrez le nombre de sites">
+                <button class="button" onclick="calculateSavings()"><i class="fas fa-calculator"></i>Calculer</button>
+            </div>
+
+            <div class="result-container">
+                <div class="result">
+                    <h4>Temps Épargné</h4>
+                    <p id="timeSaved">0 heures</p>
+                </div>
+                <div class="result">
+                    <h4>Budget Épargné</h4>
+                    <p id="budgetSaved">0 euros</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="download-svg"><i class="fas fa-file-download"></i>Télécharger en SVG</button>
+            <button class="button" id="download-png"><i class="fas fa-file-download"></i>Télécharger en PNG</button>
+            <button class="button" id="download-gif"><i class="fas fa-file-download"></i>Télécharger en GIF</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Chart.js and Calculation Logic -->
+    <script src="static/js/impact.js"></script>
+</body>
+
+</html>

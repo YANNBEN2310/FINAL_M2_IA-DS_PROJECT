@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.goal-container {
+    background-color: #ffffff;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px; /* Increased padding */
+    width: 95%; /* Increased width */
+    max-width: 1600px; /* Increased max width */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.goal-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Summary section */
+.goal-summary p {
+    font-size: 18px; /* Slightly larger text */
+    line-height: 1.6; /* Slightly more line height */
+    color: #555;
+}
+
+/* Schema Section */
+.goal-schema {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px; /* Increased padding */
+    border-radius: 30px;
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+.circle-container {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1; /* Ensure circles are on top */
+    text-align: center;
+}
+
+.circle-container i {
+    font-size: 36px; /* Increased icon size */
+    margin-bottom: 5px;
+    color: #ffffff; /* Icon color will now match the background color of the circle */
+}
+
+.circle-container p {
+    margin: 0;
+    font-size: 16px; /* Slightly larger text */
+    color: #ffffff; /* Matching text color with the icon color */
+}
+
+/* Different colors for each circle */
+.circle-container:nth-child(1) {
+    background-color: #ff8a80; /* Light red */
+}
+
+.circle-container:nth-child(3) {
+    background-color: #ffb74d; /* Light orange */
+}
+
+.circle-container:nth-child(5) {
+    background-color: #64b5f6; /* Light blue */
+}
+
+.circle-container:nth-child(7) {
+    background-color: #81c784; /* Light green */
+}
+
+.circle-container:nth-child(9) {
+    background-color: #9575cd; /* Light purple */
+}
+
+.circle-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 123, 255, 0.3);
+}
+
+.arrow-container {
+    font-size: 28px; /* Increased font size */
+    color: #007bff;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-align: center;
+    padding: 0 15px; /* Increased padding */
+}
+
+.arrow-container i {
+    margin-left: 5px;
+}
+
+.arrow-container:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}

@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.summary-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 1600px;
+}
+
+.heartbeat-heading {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, green, orange);
+    background: none;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, blue, red);
+    text-align: center;
+    font-size: 25px;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.heartbeat-heading:hover {
+    animation: heartbeat 1s infinite;
+    border-radius: 50px;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+.summary-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.summary-list li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    background-color: #e3f2fd;
+    cursor: pointer;
+}
+
+.summary-list li:hover {
+    background-color: #bbdefb;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.summary-list ul {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.page-number {
+    float: right;
+    color: gray;
+    font-style: italic;
+}
+/* Positioning for the arrows */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    z-index: 1000; /* Ensure arrows are on top */
+}
+
+.arrow-left {
+    left: -70px; /* Adjust left position */
+}
+
+.arrow-right {
+    right: -70px; /* Adjust right position */
+}
+
+.arrow-left i, .arrow-right i {
+    color: white;
+    font-size: 24px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #ffeb3b; /* Change background on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.arrow-left:hover i, .arrow-right:hover i {
+    color: black; /* Change arrow color on hover */
+}
+/* Positioning for the navigation arrows */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    z-index: 1000; /* Ensure arrows are on top */
+}
+
+.arrow-left {
+    left: -70px; /* Adjust left position */
+}
+
+.arrow-right {
+    right: -70px; /* Adjust right position */
+}
+
+.arrow-left i, .arrow-right i {
+    color: white;
+    font-size: 24px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: #ffeb3b; /* Change background on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.arrow-left:hover i, .arrow-right:hover i {
+    color: black; /* Change arrow color on hover */
+}

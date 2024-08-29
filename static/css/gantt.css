@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1700px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.gantt-table {
+    width: 100%;
+    margin-top: 20px;
+    display: table;
+    box-sizing: border-box;
+    border-collapse: separate; /* Ensure we can have rounded corners */
+    border-spacing: 0; /* Remove gaps between table cells */
+    border-radius: 15px; /* Rounds the corners of the table */
+    overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+.gantt-table th,
+.gantt-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.gantt-table th {
+    background-color: #f4f4f4;
+}
+
+/* Apply rounded corners to the table */
+.gantt-table th:first-child {
+    border-top-left-radius: 15px;
+}
+
+.gantt-table th:last-child {
+    border-top-right-radius: 15px;
+}
+
+.gantt-table tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.gantt-table tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+/* Hover effect for table rows */
+.gantt-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.gantt-table tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 600px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: none;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.gantt-bar {
+    height: 20px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    position: absolute;
+    display: block;
+}
+
+.gantt-bar span {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75rem;
+    color: #333;
+}
+
+.blue {
+    background-color: #1a73e8;
+}
+
+.green {
+    background-color: #34a853;
+}
+
+.yellow {
+    background-color: #fbbc05;
+}
+
+.red {
+    background-color: #ea4335;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+    position: relative;
+    border-bottom: 1px solid #999;
+}
+
+.timeline span {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8rem;
+    position: relative;
+}
+
+.timeline span::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: -600px;
+    left: 50%;
+    width: 1px;
+    background-color: #999;
+    transform: translateX(-50%);
+}
+
+.legend {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.legend-item:hover .legend-color {
+    transform: scale(1.2);
+}
+
+.blue-legend {
+    background-color: #1a73e8;
+}
+
+.green-legend {
+    background-color: #34a853;
+}
+
+.yellow-legend {
+    background-color: #fbbc05;
+}
+
+.red-legend {
+    background-color: #ea4335;
+}
+
+.total-duration {
+    text-align: right;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.download-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Style for the "Show Gantt" button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3c34a8; /* Purple color */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0; /* Add some margin to separate from other elements */
+}
+
+.button:hover {
+    background-color: #2c8a46; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:active {
+    background-color: #2c8a46; /* Darker green when active */
+    transform: scale(1); /* Return to normal size when active */
+}
+
+@media (max-width: 768px) {
+    .gantt-bar {
+        height: 20px;
+        margin-bottom: 5px;
+    }
+}

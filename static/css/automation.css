@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.section h3 i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.actions, .clicks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions div, .clicks div {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.actions div:hover, .clicks div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.actions div:last-child, .clicks div:last-child {
+    margin-right: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+/* Sub-container Colors */
+#sub-container-1 { background-color: #ffdddd; } /* Light Red */
+#sub-container-2 { background-color: #ddffdd; } /* Light Green */
+#sub-container-3 { background-color: #ddddff; } /* Light Blue */
+#sub-container-4 { background-color: #ffddff; } /* Light Pink */
+#sub-container-5 { background-color: #ffffdd; } /* Light Yellow */
+#sub-container-6 { background-color: #ddffff; } /* Light Cyan */
+#sub-container-7 { background-color: #ffd700; } /* Gold */
+#sub-container-8 { background-color: #ffb6c1; } /* Light Coral */

@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 40px;  /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sub-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 40px;  /* More rounded corners */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sub-container.expand {
+    transform: scale(1.05);
+}
+
+/* Different background colors for each sub-container */
+#sub-container-1 { background-color: #cce7ff; }
+#sub-container-2 { background-color: #ffcce7; }
+#sub-container-3 { background-color: #ccffe7; }
+#sub-container-4 { background-color: #fff7cc; }
+#sub-container-5 { background-color: #e7ccff; }
+
+.sub-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);  /* Slightly enlarge the container on hover */
+}
+
+.sub-container i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.icon-python {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.icon-selenium {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.icon-pandas {
+    background-image: url('https://pandas.pydata.org/static/img/pandas_mark.svg');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.icon-nltk {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1184/0*zKRz1UgqpOZ4bvuA');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.icon-logging {
+    background-image: url('https://raw.githubusercontent.com/chamkank/flask-logger/main/flask_logger/static/images/flask.png');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;  /* Rounded buttons */
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button i {
+    margin-right: 10px;
+}

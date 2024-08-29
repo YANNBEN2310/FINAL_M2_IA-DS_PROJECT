@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt Chart for Project Phases</title>
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/gantt.css">
+</head>
+<body>
+    <div class="container" id="ganttChart">
+        <h2>Gantt Chart for Project Phases</h2>
+        <button class="button" onclick="toggleDisplay()">Show Gantt</button>
+        <button class="download-btn" onclick="downloadChart()">Download PNG</button>
+
+        <table class="gantt-table">
+            <thead>
+                <tr>
+                    <th>Phase & Subphases</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="color: #1a73e8;">
+                    <td>Phase 1 - Sous-phase 1.0</td>
+                    <td>2023-10-18</td>
+                    <td>2023-11-02</td>
+                    <td>Analyse et Définition des Besoins</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #1a73e8;">
+                    <td>Phase 1 - Sous-phase 1.1</td>
+                    <td>2023-11-02</td>
+                    <td>2023-11-17</td>
+                    <td>Analyse de l'existant</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #1a73e8;">
+                    <td>Phase 1 - Sous-phase 1.2</td>
+                    <td>2023-11-17</td>
+                    <td>2023-12-02</td>
+                    <td>Définition des spécifications fonctionnelles</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #1a73e8;">
+                    <td>Phase 1 - Sous-phase 1.3</td>
+                    <td>2023-12-02</td>
+                    <td>2023-12-17</td>
+                    <td>Planification détaillée</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #34a853;">
+                    <td>Phase 2 - Sous-phase 2.1</td>
+                    <td>2024-01-02</td>
+                    <td>2024-02-02</td>
+                    <td>Développement du prototype</td>
+                    <td>30 days</td>
+                </tr>
+                <tr style="color: #34a853;">
+                    <td>Phase 2 - Sous-phase 2.2</td>
+                    <td>2024-02-02</td>
+                    <td>2024-02-17</td>
+                    <td>Développement des fonctionnalités avancées</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #34a853;">
+                    <td>Phase 2 - Sous-phase 2.3</td>
+                    <td>2024-02-17</td>
+                    <td>2024-03-17</td>
+                    <td>Tests et optimisation</td>
+                    <td>30 days</td>
+                </tr>
+                <tr style="color: #fbbc05;">
+                    <td>Phase 3 - Sous-phase 3.0</td>
+                    <td>2024-03-17</td>
+                    <td>2024-04-17</td>
+                    <td>Développement de l'Application Web</td>
+                    <td>30 days</td>
+                </tr>
+                <tr style="color: #fbbc05;">
+                    <td>Phase 3 - Sous-phase 3.1</td>
+                    <td>2024-04-17</td>
+                    <td>2024-06-02</td>
+                    <td>Conception de l'architecture</td>
+                    <td>46 days</td>
+                </tr>
+                <tr style="color: #fbbc05;">
+                    <td>Phase 3 - Sous-phase 3.2</td>
+                    <td>2024-06-02</td>
+                    <td>2024-07-02</td>
+                    <td>Intégration des modules d'analyse</td>
+                    <td>30 days</td>
+                </tr>
+                <tr style="color: #fbbc05;">
+                    <td>Phase 3 - Sous-phase 3.3</td>
+                    <td>2024-07-02</td>
+                    <td>2024-07-17</td>
+                    <td>Tests utilisateurs</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #ea4335;">
+                    <td>Phase 4 - Sous-phase 4.0</td>
+                    <td>2024-07-17</td>
+                    <td>2024-08-17</td>
+                    <td>Déploiement et Formation</td>
+                    <td>31 days</td>
+                </tr>
+                <tr style="color: #ea4335;">
+                    <td>Phase 4 - Sous-phase 4.1</td>
+                    <td>2024-08-17</td>
+                    <td>2024-09-01</td>
+                    <td>Mise en production</td>
+                    <td>15 days</td>
+                </tr>
+                <tr style="color: #ea4335;">
+                    <td>Phase 4 - Sous-phase 4.2</td>
+                    <td>2024-09-01</td>
+                    <td>2024-09-16</td>
+                    <td>Formation des utilisateurs</td>
+                    <td>15 days</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="timeline">
+            <span>Oct 2023</span>
+            <span>Nov 2023</span>
+            <span>Dec 2023</span>
+            <span>Jan 2024</span>
+            <span>Feb 2024</span>
+            <span>Mar 2024</span>
+            <span>Apr 2024</span>
+            <span>May 2024</span>
+            <span>Jun 2024</span>
+            <span>Jul 2024</span>
+            <span>Aug 2024</span>
+            <span>Sep 2024</span>
+        </div>
+
+        <div class="chart-container">
+            <div class="gantt-bar blue" style="left: 0%; width: 4.7%; top: 1%;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar blue" style="left: 4.7%; width: 4.7%; top: 40px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar blue" style="left: 9.4%; width: 4.7%; top: 80px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar blue" style="left: 14.1%; width: 4.7%; top: 120px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar green" style="left: 21.9%; width: 8.1%; top: 160px;" data-duration="30 days"><span>30 days</span></div>
+            <div class="gantt-bar green" style="left: 30%; width: 4.7%; top: 200px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar green" style="left: 34.7%; width: 7.8%; top: 240px;" data-duration="30 days"><span>30 days</span></div>
+            <div class="gantt-bar yellow" style="left: 42.5%; width: 8.2%; top: 280px;" data-duration="30 days"><span>30 days</span></div>
+            <div class="gantt-bar yellow" style="left: 50.7%; width: 15%; top: 320px;" data-duration="46 days"><span>46 days</span></div>
+            <div class="gantt-bar yellow" style="left: 65.7%; width: 8.2%; top: 360px;" data-duration="30 days"><span>30 days</span></div>
+                        <div class="gantt-bar yellow" style="left: 73.9%; width: 4.7%; top: 400px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar red" style="left: 78.6%; width: 8.2%; top: 440px;" data-duration="31 days"><span>31 days</span></div>
+            <div class="gantt-bar red" style="left: 86.8%; width: 4.7%; top: 480px;" data-duration="15 days"><span>15 days</span></div>
+            <div class="gantt-bar red" style="left: 91.5%; width: 4.7%; top: 520px;" data-duration="15 days"><span>15 days</span></div>
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color blue-legend"></div>
+                <span>Phase 1: 18.93%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color green-legend"></div>
+                <span>Phase 2: 23.66%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color yellow-legend"></div>
+                <span>Phase 3: 38.17%</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color red-legend"></div>
+                <span>Phase 4: 19.24%</span>
+            </div>
+        </div>
+
+        <div class="total-duration">
+            <strong>Total Duration:</strong> 317 days
+        </div>
+    </div>
+
+    <!-- Include JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="static/js/gantt.js"></script>
+</body>
+</html>
+

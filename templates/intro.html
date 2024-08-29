@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Gestion Énergétique</title>
+    <link rel="stylesheet" href="/static/css/intro.css">
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="intro-container">
+        <h1>I. Introduction</h1>
+        
+        <!-- Contexte du Projet Section -->
+        <div class="context-container" id="context-container">
+            <h2>A. Contexte du Projet</h2>
+            <div id="context-content">
+                <p>
+                    Dans un contexte où la gestion énergétique est devenue une priorité majeure pour les entreprises, notamment dans le secteur tertiaire, l'efficacité et la précision dans le suivi des consommations énergétiques sont cruciales. La plateforme iBoard, développée par DATANUMIA, filiale d'EDF, a été conçue pour répondre à ces besoins en permettant aux Energy Managers de surveiller les flux énergétiques tels que l'électricité, le gaz, le fioul, le chauffage urbain et le froid urbain sur des sites multiples. Cette surveillance est essentielle pour optimiser la consommation énergétique, réduire les coûts et minimiser l'empreinte carbone des entreprises.
+                </p>
+                <p>
+                    Cependant, malgré ses avantages, la plateforme iBoard présente plusieurs limitations qui ralentissent les processus décisionnels. L'une des principales contraintes est le besoin d'interactions manuelles intensives pour récupérer et analyser les données de consommation énergétique. Pour un portefeuille de 1 000 sites, il peut être nécessaire de réaliser jusqu'à 75 000 clics pour collecter les données, ce qui représente un effort considérable en termes de temps et de ressources humaines.
+                </p>
+                <p>
+                    De plus, les outils d'analyse actuels manquent de fonctionnalités avancées pour la prédiction des consommations futures, une capacité pourtant essentielle pour planifier des actions correctives et des stratégies d'optimisation énergétique.
+                </p>
+            </div>
+            <!-- Toggle Button -->
+            <button class="toggle-button" id="toggle-button" onclick="toggleContent()">Masquer</button>
+        </div>
+
+        <!-- Schéma du Contexte Section -->
+        <div class="schematic-container">
+            <h2>Contexte</h2>
+            <div class="schema">
+                <div class="circle-container edf">
+                    <img src="/static/images/edf-logo.png" alt="EDF Logo">
+                </div>
+                
+                <!-- Arrow connector with label -->
+                <div class="arrow-container">
+                    Soutraite
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <img src="/static/images/datanumia-logo.png" alt="DATANUMIA Logo">
+                </div>
+                <div class="arrow-container">
+                    EMS
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <img src="/static/images/energy-management-logo.png" alt="Energy Management">
+                </div>
+                <div class="arrow-container">
+                    Géré par
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <img src="/static/images/energy-manager.png" alt="Energy Manager">
+                </div>
+            </div>
+        </div>
+
+        <!-- Schéma pour les clics -->
+        <div class="click-schematic-container">
+            <h2>Tâches Répétitives</h2>
+            <div class="click-schema">
+                <div class="circle-container">
+                    <i class="fas fa-building"></i>
+                    <p>1 000 Sites</p>
+                </div>
+                <div class="arrow-container">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <p>75 000 Clics</p>
+                </div>
+                <div class="arrow-container">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <i class="fas fa-clock"></i>
+                    <p>Temps & Ressources</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schéma pour la prédiction -->
+        <div class="prediction-schematic-container">
+            <h2>Limites des Outils d'Analyse</h2>
+            <div class="prediction-schema">
+                <div class="circle-container">
+                    <i class="fas fa-chart-line"></i>
+                    <p>Outils d'Analyse</p>
+                </div>
+                <div class="arrow-container">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <i class="fas fa-question"></i>
+                    <p>Manque de Prédiction</p>
+                </div>
+                <div class="arrow-container">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="circle-container">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Actions Correctives</p>
+                </div>
+            </div>
+        </div>
+        <div class="energy-flow-schematic-container">
+            <h2>Divérsité des Flux énergétiques</h2>
+            <div class="energy-flow-schema">
+                <div class="circle-container energy-flow-circle electricity">
+                    <i class="fas fa-bolt"></i>
+                    <p>Électricité</p>
+                </div>
+                <div class="circle-container energy-flow-circle gas">
+                    <i class="fas fa-fire"></i>
+                    <p>Gaz</p>
+                </div>
+                <div class="circle-container energy-flow-circle oil">
+                    <i class="fas fa-oil-can"></i>
+                    <p>Fioul</p>
+                </div>
+                <div class="circle-container energy-flow-circle heating">
+                    <i class="fas fa-thermometer-three-quarters"></i>
+                    <p>Chauffage Urbain</p>
+                </div>
+                <div class="circle-container energy-flow-circle cooling">
+                    <i class="fas fa-snowflake"></i>
+                    <p>Froid Urbain</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+
+    <script src="/static/js/intro.js"></script>
+</body>
+</html>

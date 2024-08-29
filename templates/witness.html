@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodologie de l'Enquête</title>
+    <link rel="stylesheet" href="/static/css/witness.css">
+    <!-- Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Chart.js Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="witness-container">
+        <h1>III. Méthodologie de l'Enquête</h1>
+
+        <!-- Objectifs de l'Enquête -->
+        <div class="section-container">
+            <h2>A. Objectifs de l'Enquête</h2>
+            <div class="objectives">
+                <div class="objective-item">
+                    <div class="icon-container bg-blue">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <p>Identification des Limites Actuelles</p>
+                </div>
+                <div class="objective-item">
+                    <div class="icon-container bg-orange">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <p>Évaluation des Besoins en Automatisation</p>
+                </div>
+                <div class="objective-item">
+                    <div class="icon-container bg-green">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <p>Analyse des Attentes en Matière de Prédiction</p>
+                </div>
+                <div class="objective-item">
+                    <div class="icon-container bg-red">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <p>Mesure de la Satisfaction et des Attentes</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ciblage et Échantillonnage -->
+        <div class="section-container">
+            <h2>B. Ciblage et Échantillonnage</h2>
+            <div class="sampling">
+                <div class="chart-container">
+                    <canvas id="rolesChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="responseChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analyse des Résultats de l'Enquête -->
+        <div class="section-container">
+            <h2>C. Analyse des Résultats de l'Enquête</h2>
+            <div class="analysis">
+                <div class="chart-container">
+                    <canvas id="satisfactionChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="energyTypeChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart for Besoins à Développer -->
+        <div class="section-container">
+            <h2>Représentation des Besoins à Développer</h2>
+            <div class="chart-container">
+                <canvas id="besoinsChart"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/static/js/witness.js"></script>
+</body>
+</html>

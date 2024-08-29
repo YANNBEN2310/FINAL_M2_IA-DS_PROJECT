@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-container {
+    position: relative;
+    background-image: url('https://i2.wp.com/media.giphy.com/media/MdSkCCObvFLNv7jsgE/giphy.gif');
+    background-size: cover;
+    border-radius: 30px;
+    padding: 50px;
+    color: white;
+    text-align: center;
+    width: 1500px;
+    max-width: 1500px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-left, .logo-right {
+    position: absolute;
+    top: 20px; /* Adjusted to move logos inside the container */
+    width: 140px; /* Increase size */
+    height: 140px; /* Increase size */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white; /* Ensures the logos stand out */
+}
+
+.logo-left img, .logo-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-left {
+    left: 20px; /* Adjusted to move logos inside the container */
+}
+
+.logo-right {
+    right: 20px; /* Adjusted to move logos inside the container */
+}
+
+.logo-left:hover, .logo-right:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container, .program-container, .project-title-container, .project-type-container, .presenter-container, .model-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    width: 90%;
+}
+
+.project-title-container h1 {
+    font-size: 24px; /* Reduced font size */
+    line-height: 1.4; /* Adjust line height for better readability */
+}
+
+.logo-container a, .program-container a, .project-title-container a, .project-type-container a, .presenter-container a, .model-container a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set color to white */
+}
+
+.logo-container h4, .program-container h4, .project-title-container h1, .project-type-container h2, .model-container h3, .presenter-container p {
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.presenter-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.presenter-container p {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+div:hover {
+    background-color: rgba(122, 61, 61, 0.76) !important;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, p:hover {
+    color: #ffeb3b !important;
+}
+
+.arrow-right {
+    position: absolute;
+    right: -350px; /* Adjust position to be outside the container */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-right i {
+    color: white;
+    font-size: 24px;
+}
+
+.arrow-right:hover {
+    background-color: #ffeb3b; /* Change background on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly increase size on hover */
+}
+
+.arrow-right:hover i {
+    color: black; /* Change arrow color on hover */
+}

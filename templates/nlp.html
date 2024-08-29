@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution IA apportées</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="static/css/nlp.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Solution IA apportées</h1>
+        <button class="btn-toggle" id="btnToggle">Dark Mode</button>
+    </div>
+    
+    <div class="container">
+        <button class="btn-play" id="btnPlay">Play</button>
+        <button class="btn-notebook" id="btnNotebook">Open Notebook</button>
+
+        <h2>NLP Text Matching Similarity</h2>
+
+        <h3>Adresses Originales</h3>
+        <div id="originalAddresses"></div>
+        
+        <h3>Adresses Prétraitées</h3>
+        <div id="preprocessedAddresses" class="hidden"></div>
+        
+        <h3>Vecteurs TF-IDF</h3>
+        <div id="tfidfVectors" class="hidden"></div>
+
+        <h3>Formule TF-IDF</h3>
+        <div class="formula hidden" id="tfidfFormula">
+            <p>TF-IDF est calculé comme :</p>
+            <p><b>TF(t, d) = (Nombre d'apparitions du terme t dans le document d) / (Nombre total de termes dans le document d)</b></p>
+            <p><b>IDF(t) = log(Total des documents / Nombre de documents contenant le terme t)</b></p>
+            <p><b>TF-IDF(t, d) = TF(t, d) * IDF(t)</b></p>
+        </div>
+
+        <h3>Similarité Cosinus</h3>
+        <div id="cosineSimilarity" class="hidden"></div>
+
+        <h3>Formule de la Similarité Cosinus</h3>
+        <div class="formula hidden" id="cosineFormula">
+            <p>La similarité cosinus est calculée comme :</p>
+            <p><b>cos(θ) = (A · B) / (||A|| * ||B||)</b></p>
+            <p>où A · B est le produit scalaire des vecteurs A et B, et ||A|| et ||B|| sont les normes des vecteurs A et B.</p>
+        </div>
+
+        <div class="cosineGraphContainer hidden" id="cosineGraphContainer">
+            <canvas id="cosineGraph" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Développé par Yann BEN ABDERRAHMANE 2024</p>
+    </footer>
+
+    <!-- Link to external JS file -->
+    <script src="static/js/nlp.js"></script>
+</body>
+</html>

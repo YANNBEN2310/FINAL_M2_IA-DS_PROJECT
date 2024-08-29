@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLP - Multilayer Perceptron</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="static/css/mlp.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <div class="navbar">
+        <h1>MLP - Multilayer Perceptron</h1>
+        <button class="btn-toggle" id="btnToggle">Dark Mode</button>
+    </div>
+
+    <div class="container">
+        <button class="btn-play" id="btnPlay">Play</button>
+        <button class="btn-notebook" id="btnNotebook">Open Notebook</button>
+
+        <h2>Normalisation des Variables Explicatives (MinMaxScaler)</h2>
+        <div class="section-content" id="normalization"></div>
+        <div id="formulaContainer" class="formula">
+            <h3>Normalization Formula</h3>
+            <p id="formulaDisplay">
+                <img src="https://latex.codecogs.com/svg.latex?\Large&space;x'=\frac{x-\text{min}(x)}{\text{max}(x)-\text{min}(x)}" title="Normalization Equation" />
+            </p>
+        </div>
+        
+        <h2>Réseau de Neurones Multi-Couches (MLP - Multilayer Perceptron)</h2>
+        <div class="section-content active" id="mlpExplanation">
+            <p><strong>Principe Mathématique :</strong></p>
+            <p>Je construis un <strong>réseau de neurones multi-couches (MLP)</strong>, un modèle d'apprentissage profond composé de plusieurs couches de neurones, où chaque neurone d'une couche est connecté à chaque neurone de la couche suivante.</p>
+            <p>L'équation de base pour un neurone dans une couche cachée est la suivante :</p>
+            <p>
+                <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j=f\left(\sum_{i}w_{ij}x_i+b_j\right)" title="MLP Neuron Equation" />
+            </p>
+            <p>où :</p>
+            <ul>
+                <li><strong><img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j" alt="h_j"/></strong> est la sortie du neurone <img src="https://latex.codecogs.com/svg.latex?\Large&space;j" alt="j"/> dans la couche cachée,</li>
+                <li><strong><img src="https://latex.codecogs.com/svg.latex?\Large&space;x_i" alt="x_i"/></strong> sont les entrées du neurone <img src="https://latex.codecogs.com/svg.latex?\Large&space;j" alt="j"/> ,</li>
+                <li><strong><img src="https://latex.codecogs.com/svg.latex?\Large&space;w_{ij}" alt="w_{ij}"/></strong> sont les poids associés à chaque connexion entre les neurones <img src="https://latex.codecogs.com/svg.latex?\Large&space;i" alt="i"/> et <img src="https://latex.codecogs.com/svg.latex?\Large&space;j" alt="j"/>,</li>
+                <li><strong><img src="https://latex.codecogs.com/svg.latex?\Large&space;b_j" alt="b_j"/></strong> est le biais ajouté au neurone <img src="https://latex.codecogs.com/svg.latex?\Large&space;j" alt="j"/>,</li>
+                <li><strong><img src="https://latex.codecogs.com/svg.latex?\Large&space;f" alt="f"/></strong> est la fonction d'activation (souvent une fonction non linéaire comme ReLU ou sigmoid).</li>
+
+            </ul>
+            <p>Dans le modèle MLP, j'utilise la <strong>fonction d'activation ReLU (Rectified Linear Unit)</strong> dans les couches cachées. La fonction ReLU est définie par :</p>
+            <p>
+                <img src="https://latex.codecogs.com/svg.latex?\Large&space;f(x)=\max(0,x)" title="ReLU Function" />
+            </p>
+            <p>ReLU est appliqué pour introduire de la non-linéarité, ce qui permet au modèle d'apprendre des relations complexes.</p>
+            <!-- Add the Open Animation Button Here -->
+            <button class="btn-animation" id="btnAnimation">Open Animation</button>
+        </div>
+        <div class="section-content active" id="mlpVisualization">
+            <h3>MLP Visualization</h3>
+            <img src="static/images/mlp.svg" alt="MLP Visualization" id="mlpImage">
+        </div>
+
+        <h2>Bagging Regressor (Bagging Ensemble avec MLP)</h2>
+        <div class="section-content active" id="baggingExplanation">
+            <h3>Principe Mathématique</h3>
+            <p>Pour améliorer la stabilité et la précision des modèles d'apprentissage machine, j'utilise le <strong>Bagging</strong> (Bootstrap Aggregating), une technique d'ensemble qui combine les prédictions de plusieurs modèles entraînés sur des sous-ensembles différents du même jeu de données.</p>
+            <p>L'objectif est de réduire la variance du modèle et d'améliorer la généralisation. Mathématiquement, si <img src="https://latex.codecogs.com/svg.latex?\hat{f}_i(x)" title="\hat{f}_i(x)" /> représente la prédiction du <img src="https://latex.codecogs.com/svg.latex?i^{\text{eme}}" title="i^{\text{eme}}" /> modèle, la prédiction finale est donnée par :</p>
+            <p><img src="https://latex.codecogs.com/svg.latex?\hat{f}(x)=\frac{1}{M}\sum_{i=1}^{M}\hat{f}_i(x)" title="\hat{f}(x)=\frac{1}{M}\sum_{i=1}^{M}\hat{f}_i(x)" /></p>
+            <p>Où :</p>
+            <ul>
+                <li><img src="https://latex.codecogs.com/svg.latex?M" title="M" /> est le nombre total de modèles dans l'ensemble.</li>
+                <li><img src="https://latex.codecogs.com/svg.latex?\hat{f}_i(x)" title="\hat{f}_i(x)" /> est la prédiction du <img src="https://latex.codecogs.com/svg.latex?i^{\text{eme}}" title="i^{\text{ème}}" /> modèle.</li>
+            </ul>
+            <p>En pratique, cela signifie que chaque modèle MLP produit une prédiction, et ces prédictions sont ensuite moyennées pour obtenir la prédiction finale plus robuste.</p>
+            <button class="btn-animation" id="btnBaggingAnimation">Voir l'Animation</button>
+        </div>
+        <div class="section-content active" id="baggingVisualization">
+            <h3>Bagging Regressor Visualization</h3>
+            <div id="baggingAnimationContainer">
+                <!-- This is where the bagging animation will be inserted -->
+            </div>
+        </div>
+
+        <h2>Metrics d'Évaluation (RMSE, MAE, R²)</h2>
+        <div class="section-content active" id="metricsExplanation">
+            <h3>Calcul des Metrics</h3>
+            <p>Voici comment les métriques de performance du modèle sont calculées :</p>
+            <button class="btn-animation" id="btnMetricsAnimation">Voir l'Animation</button>
+        </div>
+        <div class="section-content active" id="metricsVisualization">
+            <h3>Visualization des Metrics</h3>
+            <div id="metricsAnimationContainer">
+                <!-- The animations for metrics calculation will appear here -->
+            </div>
+        </div>
+
+        <h2>Cross-Validation (Validation Croisée)</h2>
+        <div class="section-content active" id="crossValidationExplanation">
+            <h3>Principe Mathématique</h3>
+            <p>Pour évaluer la performance de mon modèle de manière plus générale, j'utilise la <strong>validation croisée</strong>. Dans la validation croisée \( k \)-fold, les données sont divisées en \( k \) sous-ensembles ou "folds". Le modèle est entraîné sur \( k-1 \) folds et validé sur le fold restant. Ce processus est répété \( k \) fois, chaque fold étant utilisé exactement une fois comme ensemble de validation. Le score final est la moyenne des scores des \( k \) validations.</p>
+            <p>Mathématiquement, si \( E_i \) est l'erreur sur le \( i^{\text{ème}} \) fold, l'erreur de validation croisée est :</p>
+            <p>\[
+            E_{CV} = \frac{1}{k} \sum_{i=1}^{k} E_i
+            \]</p>
+
+            <button class="btn-animation" id="btnCrossValidationAnimation">Voir l'Animation</button>
+        </div>
+        <div class="section-content active" id="crossValidationVisualization">
+            <h3>Exemple d'application</h3>
+            <div id="crossValidationAnimationContainer">
+                <!-- The Cross-Validation animation will appear here -->
+            </div>
+        </div>
+        <h2>Modèle Baseline (Dummy Regressor)</h2>
+        <div class="section-content active" id="baselineExplanation">
+            <h3>Principe Mathématique</h3>
+            <p>Je commence souvent par un <strong>modèle de baseline</strong> pour établir une référence. Le <code>DummyRegressor</code> que j'utilise dans ce code est un modèle qui prédit simplement la moyenne des valeurs cibles dans l'ensemble d'entraînement. Cela donne une performance de référence que le modèle plus complexe (ici, MLP avec bagging) doit dépasser.</p>
+            <p>Le <code>DummyRegressor</code> calcule les prédictions comme suit :</p>
+            <p>$$\hat{y} = \frac{1}{n} \sum_{i=1}^{n} y_i$$</p>
+            <button class="btn-animation" id="btnBaselineAnimation">Voir l'Animation</button>
+        </div>
+        <div class="section-content active" id="baselineVisualization">
+            <h3>Exemple d'application</h3>
+            <div id="baselineAnimationContainer">
+                <!-- The Dummy Regressor animation will appear here -->
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; Développé par Yann BEN ABDERRAHMANE 2024</p>
+    </footer>
+
+    <!-- Link to external JS files -->
+    <script src="static/js/mlp.js"></script>
+    <script src="static/js/svg.js"></script>
+</body>
+</html>

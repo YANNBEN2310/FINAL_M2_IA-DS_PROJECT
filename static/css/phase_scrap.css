@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.phase {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #e6f7ff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.phase:hover {
+    transform: scale(1.05); /* Slightly enlarge the phase on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add a slight shadow effect on hover */
+}
+
+.phase i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button i {
+    margin-right: 10px;
+}
+
+/* Phase Colors */
+#phase-1 {
+    background-color: #ffdddd; /* Light Red */
+}
+#phase-2 {
+    background-color: #ddffdd; /* Light Green */
+}
+#phase-3 {
+    background-color: #ddddff; /* Light Blue */
+}
+#phase-4 {
+    background-color: #ffddff; /* Light Pink */
+}
+#phase-5 {
+    background-color: #ffffdd; /* Light Yellow */
+}

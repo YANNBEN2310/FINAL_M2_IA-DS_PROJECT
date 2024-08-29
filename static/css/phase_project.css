@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sub-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Different background colors for each sub-container */
+#phase-1 {
+    background-color: #ffcccc; /* Light Red */
+}
+
+#phase-2 {
+    background-color: #cceeff; /* Light Blue */
+}
+
+#phase-3 {
+    background-color: #d4edda; /* Light Green */
+}
+
+#phase-4 {
+    background-color: #f5c6cb; /* Light Pink */
+}
+
+#phase-5 {
+    background-color: #ffeeba; /* Light Yellow */
+}
+
+.sub-container:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+.sub-container i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.percentage-container {
+    width: 80px;
+    text-align: center;
+    background-color: #ffeb3b;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button i {
+    margin-right: 10px;
+}

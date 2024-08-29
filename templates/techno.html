@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technologies Utilisées</title>
+    <!-- Correct Font Awesome Integration -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/techno.css">
+</head>
+<body>
+    <div class="container" id="content-to-capture">
+        <h2>Technologies Utilisées</h2>
+        <p>Le développement du scraper repose sur l'utilisation de technologies éprouvées et flexibles, principalement Python et Selenium, qui offrent une grande capacité d'automatisation et de gestion des interactions web.</p>
+
+        <div class="sub-container" id="sub-container-1">
+            <div class="icon-python"></div>
+            <div>
+                <h3>Python</h3>
+                <p>Python a été choisi comme langage de programmation principal en raison de sa simplicité, de sa lisibilité, et de la richesse de son écosystème de bibliothèques.</p>
+            </div>
+        </div>
+
+        <div class="sub-container" id="sub-container-2">
+            <div class="icon-selenium"></div>
+            <div>
+                <h3>Selenium</h3>
+                <p>Selenium permet d'interagir avec la plateforme iBoard comme le ferait un utilisateur humain, mais de manière automatisée.</p>
+            </div>
+        </div>
+
+        <div class="sub-container" id="sub-container-3">
+            <div class="icon-pandas"></div>
+            <div>
+                <h3>Pandas</h3>
+                <p>Pandas est utilisé pour la manipulation et l'organisation des données extraites sous forme de DataFrames.</p>
+            </div>
+        </div>
+
+        <div class="sub-container" id="sub-container-4">
+            <div class="icon-nltk"></div>
+            <div>
+                <h3>NLTK et SpaCy</h3>
+                <p>Utilisées pour le traitement du langage naturel, permettant la reconnaissance intelligente des mots-clés lors de la sélection des clients et des sites.</p>
+            </div>
+        </div>
+
+        <div class="sub-container" id="sub-container-5">
+            <div class="icon-logging"></div>
+            <div>
+                <h3>Logging</h3>
+                <p>Pour la gestion des journaux d'erreurs et des événements, facilitant le diagnostic des problèmes en cas de défaillance du scraper.</p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button" id="download-svg"><i class="fas fa-file-download"></i>Télécharger en SVG</button>
+            <button class="button" id="download-png"><i class="fas fa-file-download"></i>Télécharger en PNG</button>
+            <button class="button" id="download-gif"><i class="fas fa-file-download"></i>Télécharger en GIF</button>
+        </div>
+    </div>
+
+    <!-- Include JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js"></script>
+    <script src="/static/js/techno.js"></script>
+</body>
+</html>
