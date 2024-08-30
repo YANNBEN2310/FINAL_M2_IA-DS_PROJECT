@@ -31,4 +31,30 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = '/resume';
         }
     });
+
+    // Swipe navigation for mobile devices
+    let touchstartX = 0;
+    let touchendX = 0;
+    const swipeThreshold = 50; // Minimum distance in pixels to be considered a swipe
+
+    function handleGesture() {
+        if (Math.abs(touchstartX - touchendX) > swipeThreshold) { // Ensure the swipe is significant enough
+            if (touchendX < touchstartX) {
+                // Swipe left - navigate to the next page
+                window.location.href = '/resume';
+            } else if (touchendX > touchstartX) {
+                // Swipe right - navigate to the previous page
+                window.location.href = '/';
+            }
+        }
+    }
+
+    document.addEventListener('touchstart', function (event) {
+        touchstartX = event.changedTouches[0].screenX;
+    }, false);
+
+    document.addEventListener('touchend', function (event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    }, false);
 });

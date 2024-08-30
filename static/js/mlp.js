@@ -107,7 +107,7 @@ function animateMLPProcess(temperatureData, energyData) {
 }
 
 document.getElementById('btnNotebook').addEventListener('click', function () {
-    window.open('static/links/SIMILARITE.html', '_blank');
+    window.open('static/links/YBA_MLP_PROJET_ETUDE.html', '_blank');
 });
 
 document.getElementById('btnToggle').addEventListener('click', function () {
@@ -387,3 +387,30 @@ document.getElementById('btnBaselineAnimation').addEventListener('click', functi
         dummyBox.classList.add('active');
     }, 500); // Slight delay before showing the Dummy Regressor prediction
 });
+
+        // Swipe navigation for mobile devices
+        let touchstartX = 0;
+        let touchendX = 0;
+        const swipeThreshold = 50; // Minimum distance in pixels to be considered a swipe
+
+        function handleGesture() {
+            if (Math.abs(touchstartX - touchendX) > swipeThreshold) { // Ensure the swipe is significant enough
+                if (touchendX < touchstartX) {
+                    // Swipe left - navigate to the next page
+                    window.location.href = '/mlp';
+                } else if (touchendX > touchstartX) {
+                    // Swipe right - navigate to the previous page
+                    window.location.href = '/nlp';
+                }
+            }
+        }
+
+        document.addEventListener('touchstart', function(event) {
+            touchstartX = event.changedTouches[0].screenX;
+        }, false);
+
+        document.addEventListener('touchend', function(event) {
+            touchendX = event.changedTouches[0].screenX;
+            handleGesture();
+        }, false);
+
